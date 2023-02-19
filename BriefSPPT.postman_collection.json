@@ -1,0 +1,572 @@
+{
+	"info": {
+		"_postman_id": "2af9cccd-499d-4b43-893c-a4f17c0ef85d",
+		"name": "BriefSPPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13829349"
+	},
+	"item": [
+		{
+			"name": "pobierzOferte",
+			"item": [
+				{
+					"name": "pobierzOferte",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"idBrief\":788,\"nrBrief\":\"22_J_TVP1_ROZ_Śr_21.00\",\"idOferta\":10789,\"tytulOferty\":\"Wielki Test o Polskich Wynalazcach i Odkrywcach\",\"linkBrief\":\"https://brief-dev.tvp.pl:9060/Main/BriefDetails/788\",\"linkOpublikowana1a\":\"https://brief-dev.tvp.pl:9060/Stage1A/Details/788\",\"linkOpublikowana1b\":\"https://brief-dev.tvp.pl:9060/Stage1B/Details/11181\",\"linkOpublikowana2\":\"https://brief-dev.tvp.pl:9060/Stage2/Details/10789\",\"linkOpublikowana3\":\"https://brief-dev.tvp.pl:9060/Stage3/Details/10789\",\"linkOpublikowana4\":\"https://brief-dev.tvp.pl:9060/Stage4/Details/10789\",\"linkOpublikowana5\":\"https://brief-dev.tvp.pl:9060/Stage5/Details/10789\",\"linkOpublikowana6\":\"https://brief-dev.tvp.pl:9060/Stage6/Details/10789\",\"linkOpublikowana7\":\"https://brief-dev.tvp.pl:9060/Stage7/Details/10789\"`);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=10789",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzOferte"
+							],
+							"query": [
+								{
+									"key": "offerId",
+									"value": "10789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobierzOferteBezParametru",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Brak parametru offerId\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzOferte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobierzOferteNieznanyParametr",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Podano nieprawidłową wartość atrybutu 'offerId'=9999999\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=9999999",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzOferte"
+							],
+							"query": [
+								{
+									"key": "offerId",
+									"value": "9999999"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pobierzListeOfert",
+			"item": [
+				{
+					"name": "pobierzListeOfert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"recordsTotal\":803`);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"login\": \"magtai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzListeOfert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobierzListeOfertBezParametru",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`Brak loginu`);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzListeOfert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pobierzListeOfertNieznanyParametr",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`Brak użytkownika xdz123.`);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"login\": \"xdz123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"pobierzListeOfert"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "powiazOferteZPorozumieniem",
+			"item": [
+				{
+					"name": "powiazOferteZPorozumieniem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"idRodzajPorozumienia\": 2,\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.tvp.pl:7040/Agreement/Edit/161654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"powiazOferteZPorozumieniem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "powiazOferteZPorozumieniemTylkoWymagane",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.tvp.pl:7040/Agreement/Edit/161654\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"powiazOferteZPorozumieniem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "powiazOferteZPorozumieniemNegative",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"IdOferta\":[\"Wymagane wypełnienie pola 'IdOferta'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"IdPorozumienie\":[\"Wymagane wypełnienie pola 'IdPorozumienie'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"NazwaAudycjiTV\":[\"Wymagane wypełnienie pola 'NazwaAudycjiTV'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"NrPorozumienie\":[\"Wymagane wypełnienie pola 'NrPorozumienie'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.not.include(`\"idRodzajPorozumienia\":[\"Wymagane wypełnienie pola 'idRodzajPorozumienia'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`\"LinkPorozumienie\":[\"Wymagane wypełnienie pola 'LinkPorozumienie'.\"`);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(`Brak Id w tabeli Tvp.Brief.BriefData.Models.RodzajPorozumienia.`);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idRodzajPorozumienia\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.9",
+								"BriefForSppt",
+								"powiazOferteZPorozumieniem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usunPowiazanieOfertyZPorozumieniem",
+			"item": [
+				{
+					"name": "usunPowiazanieOfertyZPorozumieniem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPorozumienie\": 161654\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.10/BriefForSppt/usunPowiazanieOfertyZPorozumieniem",
+							"protocol": "https",
+							"host": [
+								"wso2am-dev",
+								"tvp",
+								"pl"
+							],
+							"port": "8243",
+							"path": [
+								"brief-integration",
+								"1.10",
+								"BriefForSppt",
+								"usunPowiazanieOfertyZPorozumieniem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "spptuser123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "spptuser",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Response time is less than 200ms\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(10000);",
+					"});"
+				]
+			}
+		}
+	]
+}
