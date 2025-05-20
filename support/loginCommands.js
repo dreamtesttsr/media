@@ -9,7 +9,7 @@ Cypress.Commands.add('login', (username, password) => {
         message: `${username} | ${password}`,
     })
     cy.url().then(url => {
-        if (url == 'https://sppt-dev.tvp.pl:8040/login?ReturnUrl=%2F') {
+        if (url == 'https://sppt-dev.xxx.pl:8040/login?ReturnUrl=%2F') {
             cy.get('#select2-FakeUsername-container').click()
             cy.get(`li.select2-results__option:contains(${username})`).then(select => {
                 cy.wrap(select).first().click()
@@ -87,7 +87,7 @@ Cypress.Commands.add('loginAdmin', () => {
         message: 'zalogowanie jako administrator - rola 1'
     })
     cy.visit('/')
-        .login('test_user_1', 'TVPPassw0rd')
+        .login('test_user_1', 'xxxPassw0rd')
         .loginAssert('test_user_1')
 })
 
@@ -100,7 +100,7 @@ Cypress.Commands.add('loginProducent', () => {
         message: 'zalogowanie jako producent - rola 2'
     })
     cy.visit('/')
-        .login('test_user_2', 'TVPPassw0rd')
+        .login('test_user_2', 'xxxPassw0rd')
         .loginAssert('test_user_2')
 })
 
@@ -113,7 +113,7 @@ Cypress.Commands.add('loginProducentCUP', () => {
         message: 'zalogowanie jako producent CUP - rola 2'
     })
     cy.visit('/')
-        .login('test_user_33', 'TVPPassw0rd')
+        .login('test_user_33', 'xxxPassw0rd')
         .loginAssert('test_user_33')
 })
 
@@ -126,7 +126,7 @@ Cypress.Commands.add('loginDyrektorAgencjiAKFiS', () => {
         message: 'zalogowanie jako dyrektor agencji AKFiS - rola 3'
     })
     cy.visit('/')
-        .login('test_user_3', 'TVPPassw0rd')
+        .login('test_user_3', 'xxxPassw0rd')
         .loginAssert('test_user_3')
 })
 
@@ -139,7 +139,7 @@ Cypress.Commands.add('loginDyrektorAgencjiCUP', () => {
         message: 'zalogowanie jako dyrektor agencji CUP - rola 3'
     })
     cy.visit('/')
-        .login('test_user_25', 'TVPPassw0rd')
+        .login('test_user_25', 'xxxPassw0rd')
         .loginAssert('test_user_25')
 })
 
@@ -152,7 +152,7 @@ Cypress.Commands.add('loginDyrektor', () => {
         message: 'zalogowanie jako dyrektor - rola 4'
     })
     cy.visit('/')
-        .login('test_user_4', 'TVPPassw0rd')
+        .login('test_user_4', 'xxxPassw0rd')
         .loginAssert('test_user_4')
 })
 
@@ -165,7 +165,7 @@ Cypress.Commands.add('loginPracownikAgencji', () => {
         message: 'zalogowanie jako pracownik agencji - rola 5'
     })
     cy.visit('/')
-        .login('test_user_5', 'TVPPassw0rd')
+        .login('test_user_5', 'xxxPassw0rd')
         .loginAssert('test_user_5')
 })
 
@@ -178,7 +178,7 @@ Cypress.Commands.add('loginPracownikAgencjiCUP', () => {
         message: 'zalogowanie jako pracownik agencji CUP - rola 5'
     })
     cy.visit('/')
-        .login('test_user_20', 'TVPPassw0rd')
+        .login('test_user_20', 'xxxPassw0rd')
         .loginAssert('test_user_20')
 })
 
@@ -191,7 +191,7 @@ Cypress.Commands.add('loginAdministratorBiznesowy', () => {
         message: 'zalogowanie jako Administrator biznesowy  - rola 6'
     })
     cy.visit('/')
-        .login('test_user_6', 'TVPPassw0rd')
+        .login('test_user_6', 'xxxPassw0rd')
         .loginAssert('test_user_6')
 })
 
@@ -204,7 +204,7 @@ Cypress.Commands.add('loginKontrolling', () => {
         message: 'zalogowanie jako pracownik Kontrollingu  - rola 7'
     })
     cy.visit('/')
-        .login('test_user_7', 'TVPPassw0rd')
+        .login('test_user_7', 'xxxPassw0rd')
         .loginAssert('test_user_7')
 })
 
@@ -217,7 +217,7 @@ Cypress.Commands.add('loginPracownikJednostkiWspolpracujacej', () => {
         message: 'zalogowanie jako Pracownik jednostki wspolpracujacej - rola 10'
     })
     cy.visit('/')
-        .login('test_user_10', 'TVPPassw0rd')
+        .login('test_user_10', 'xxxPassw0rd')
         .loginAssert('test_user_10')
 })
 
@@ -230,7 +230,7 @@ Cypress.Commands.add('loginKierownikProdukcji', () => {
         message: 'zalogowanie jako Kierownik Produkcji  - rola 11'
     })
     cy.visit('/')
-        .login('test_user_11', 'TVPPassw0rd')
+        .login('test_user_11', 'xxxPassw0rd')
         .loginAssert('test_user_11')
 })
 
@@ -243,7 +243,7 @@ Cypress.Commands.add('loginPracownikDyspozytury', () => {
         message: 'zalogowanie jako pracownik dyspozytury - rola 12'
     })
     cy.visit('/')
-        .login('test_user_12', 'TVPPassw0rd')
+        .login('test_user_12', 'xxxPassw0rd')
         .loginAssert('test_user_12')
 })
 
@@ -256,7 +256,7 @@ Cypress.Commands.add('loginKierownikDyspozytury', () => {
         message: 'zalogowanie jako kierownik dyspozytury - rola 13'
     })
     cy.visit('/')
-        .login('test_user_13', 'TVPPassw0rd')
+        .login('test_user_13', 'xxxPassw0rd')
         .loginAssert('test_user_13')
 })
 
@@ -269,7 +269,7 @@ Cypress.Commands.add('loginAdministratorBiznesowyCUPSprzet', () => {
         message: 'zalogowanie jako administrator binesowy CUP (sprzęt) - rola 14'
     })
     cy.visit('/')
-        .login('test_user_14', 'TVPPassw0rd')
+        .login('test_user_14', 'xxxPassw0rd')
         .loginAssert('test_user_14')
 })
 
@@ -282,7 +282,7 @@ Cypress.Commands.add('loginPracownikProdukcji', () => {
         message: 'zalogowanie jako pracownik produkcji - rola 15'
     })
     cy.visit('/')
-        .login('test_user_15', 'TVPPassw0rd')
+        .login('test_user_15', 'xxxPassw0rd')
         .loginAssert('test_user_15')
 })
 
@@ -295,7 +295,7 @@ Cypress.Commands.add('loginPracownikProdukcjiWspolpracownik', () => {
         message: 'zalogowanie jako pracownik produkcji (współpracownik)- rola 15'
     })
     cy.visit('/')
-        .login('test_user_27', 'TVPPassw0rd')
+        .login('test_user_27', 'xxxPassw0rd')
         .loginAssert('test_user_27')
 })
 
@@ -308,7 +308,7 @@ Cypress.Commands.add('loginInzynierProdukcji', () => {
         message: 'zalogowanie jako Inżynier Produkcji  - rola 16'
     })
     cy.visit('/')
-        .login('test_user_16', 'TVPPassw0rd')
+        .login('test_user_16', 'xxxPassw0rd')
         .loginAssert('test_user_16')
 })
 
@@ -321,7 +321,7 @@ Cypress.Commands.add('loginKierownikZakladuCUP', () => {
         message: 'zalogowanie jako Kierownik Zakładu CUP  - rola 17'
     })
     cy.visit('/')
-        .login('test_user_17', 'TVPPassw0rd')
+        .login('test_user_17', 'xxxPassw0rd')
         .loginAssert('test_user_17')
 })
 
@@ -334,7 +334,7 @@ Cypress.Commands.add('loginOperatorKartPracyAnulowanie', () => {
         message: 'zalogowanie jako operator kart pracy (anulowanie kart) - rola 35'
     })
     cy.visit('/')
-        .login('test_user_35', 'TVPPassw0rd')
+        .login('test_user_35', 'xxxPassw0rd')
         .loginAssert('test_user_35')
 })
 
@@ -347,7 +347,7 @@ Cypress.Commands.add('loginOperatorKartPracyNadzor', () => {
         message: 'zalogowanie jako operator kart pracy (nadzór) - rola 37'
     })
     cy.visit('/')
-        .login('test_user_37', 'TVPPassw0rd')
+        .login('test_user_37', 'xxxPassw0rd')
         .loginAssert('test_user_37')
 })
 
@@ -360,7 +360,7 @@ Cypress.Commands.add('loginOperatorKartPracy', () => {
         message: 'zalogowanie jako operator kart pracy - rola 22'
     })
     cy.visit('/')
-        .login('test_user_22', 'TVPPassw0rd')
+        .login('test_user_22', 'xxxPassw0rd')
         .loginAssert('test_user_22')
 })
 
@@ -373,7 +373,7 @@ Cypress.Commands.add('loginPracownikDzialuZakupuUslugCUP', () => {
         message: 'zalogowanie jako pracownik działu zakupu usług CUP - rola 24'
     })
     cy.visit('/')
-        .login('test_user_24', 'TVPPassw0rd')
+        .login('test_user_24', 'xxxPassw0rd')
         .loginAssert('test_user_24')
 })
 
@@ -386,7 +386,7 @@ Cypress.Commands.add('loginKierownikDzialuOrganizacjiUslug', () => {
         message: 'zalogowanie jako kierownik działu organizacji usług - rola 26'
     })
     cy.visit('/')
-        .login('test_user_26', 'TVPPassw0rd')
+        .login('test_user_26', 'xxxPassw0rd')
         .loginAssert('test_user_26')
 })
 
@@ -399,7 +399,7 @@ Cypress.Commands.add('loginAdministratorBiznesowyCUPPracownicy', () => {
         message: 'zalogowanie jako administrator biznesowy CUP (pracownicy produkcji) - rola 28'
     })
     cy.visit('/')
-        .login('test_user_28', 'TVPPassw0rd')
+        .login('test_user_28', 'xxxPassw0rd')
         .loginAssert('test_user_28')
 })
 
@@ -412,7 +412,7 @@ Cypress.Commands.add('loginAdministratorBiznesowyCUPCennik', () => {
         message: 'zalogowanie jako administrator biznesowy CUP (cennik) - rola 29'
     })
     cy.visit('/')
-        .login('test_user_29', 'TVPPassw0rd')
+        .login('test_user_29', 'xxxPassw0rd')
         .loginAssert('test_user_29')
 })
 
@@ -425,7 +425,7 @@ Cypress.Commands.add('loginAkceptantKompletnosciKU', () => {
         message: 'zalogowanie jako Akceptant kompletnosci KU - rola 41'
     })
     cy.visit('/')
-        .login('test_user_41', 'TVPPassw0rd')
+        .login('test_user_41', 'xxxPassw0rd')
         .loginAssert('test_user_41')
 })
 
@@ -438,7 +438,7 @@ Cypress.Commands.add('loginAkceptantKUKomorkiWyspecjalizowanej', () => {
         message: 'zalogowanie jako Akceptant KU komórki wyspecjalizowanej - rola 40'
     })
     cy.visit('/')
-        .login('test_user_40', 'TVPPassw0rd')
+        .login('test_user_40', 'xxxPassw0rd')
         .loginAssert('test_user_40')
 })
 
@@ -450,7 +450,7 @@ Cypress.Commands.add('loginKoordynatorUslug', () => {
         message: 'zalogowanie jako Koordynator Usług - rola 18'
     })
     cy.visit('/')
-        .login('test_user_18', 'TVPPassw0rd')
+        .login('test_user_18', 'xxxPassw0rd')
         .loginAssert('test_user_18')
 })
 
@@ -462,7 +462,7 @@ Cypress.Commands.add('loginKoordynatorUslugZamZew', () => {
         message: 'zalogowanie jako Koordynator Usług (zamówienia zewnętrzne) - rola 38'
     })
     cy.visit('/')
-        .login('test_user_38', 'TVPPassw0rd')
+        .login('test_user_38', 'xxxPassw0rd')
         .loginAssert('test_user_38')
 })
 
@@ -474,7 +474,7 @@ Cypress.Commands.add('loginHelpDesk', () => {
         message: 'zalogowanie jako HelpDesk - rola 8'
     })
     cy.visit('/')
-        .login('test_user_8', 'TVPPassw0rd')
+        .login('test_user_8', 'xxxPassw0rd')
         .loginAssert('test_user_8')
 })
 
@@ -486,6 +486,6 @@ Cypress.Commands.add('loginHelpDeskKierownik', () => {
         message: 'zalogowanie jako Kierownik HelpDesk - rola 9'
     })
     cy.visit('/')
-        .login('test_user_9', 'TVPPassw0rd')
+        .login('test_user_9', 'xxxPassw0rd')
         .loginAssert('test_user_9')
 })
