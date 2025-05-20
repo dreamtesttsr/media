@@ -10,10 +10,10 @@
         "smoke-tests": "cypress run --spec cypress/e2e/Testy/Smoke/*.js --browser chrome",
         "functional-tests": "cypress run --spec cypress/e2e/Testy/Funkcjonalne --browser chrome",
         "test:allure:demoAll": "npm run cy:run:demoAll && npm run report:allure",
-        "test:allure:tvp1123": "npm run cy:run:tvp1123 && npm run report:allure",
+        "test:allure:xxx1123": "npm run cy:run:xxx1123 && npm run report:allure",
         "cy:demo": "cypress run --spec \"cypress/e2e/examples/actions.spec.js\" --reporter mocha-allure-reporter --browser chrome --headless",
         "allure:demo": "npm run cy:demo && npm run report:allure",
-        "cy:open_testing2": "npx cypress open --env baseUrlX=https://sppt-dev.tvp.pl:8045/"
+        "cy:open_testing2": "npx cypress open --env baseUrlX=https://sppt-dev.xxx.pl:8045/"
     },
     "devDependencies": {
         "@shelex/cypress-allure-plugin": "^2.19.5",
