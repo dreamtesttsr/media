@@ -25,14 +25,14 @@ export default defineConfig({
       allureWriter(on, config);
       return config;
   },
-    baseUrl: 'https://sppt-dev.tvp.pl:8070/',
+    baseUrl: 'https://sppt-dev.xxx.pl:8070/',
     supportFile: 'cypress/support/e2e.{js,ts}',
     specPattern: 'cypress/e2e/**/*.cy.{feature,js,ts}',
     experimentalRunAllSpecs: true
   },
   env: {
-    http_proxy: 'http://proxy.tvp.pl:8080',
-    https_proxy: 'http://proxy.tvp.pl:8080',
-    no_proxy: 'sppt-dev.tvp.pl'
+    http_proxy: 'http://proxy.xxx.pl:8080',
+    https_proxy: 'http://proxy.xxx.pl:8080',
+    no_proxy: 'sppt-dev.xxx.pl'
 }
 })
