@@ -21,7 +21,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(`\"idBrief\":788,\"nrBrief\":\"22_J_TVP1_ROZ_Śr_21.00\",\"idOferta\":10789,\"tytulOferty\":\"Wielki Test o Polskich Wynalazcach i Odkrywcach\",\"linkBrief\":\"https://brief-dev.tvp.pl:9060/Main/BriefDetails/788\",\"linkOpublikowana1a\":\"https://brief-dev.tvp.pl:9060/Stage1A/Details/788\",\"linkOpublikowana1b\":\"https://brief-dev.tvp.pl:9060/Stage1B/Details/11181\",\"linkOpublikowana2\":\"https://brief-dev.tvp.pl:9060/Stage2/Details/10789\",\"linkOpublikowana3\":\"https://brief-dev.tvp.pl:9060/Stage3/Details/10789\",\"linkOpublikowana4\":\"https://brief-dev.tvp.pl:9060/Stage4/Details/10789\",\"linkOpublikowana5\":\"https://brief-dev.tvp.pl:9060/Stage5/Details/10789\",\"linkOpublikowana6\":\"https://brief-dev.tvp.pl:9060/Stage6/Details/10789\",\"linkOpublikowana7\":\"https://brief-dev.tvp.pl:9060/Stage7/Details/10789\"`);\r",
+									"    pm.expect(pm.response.text()).to.include(`\"idBrief\":788,\"nrBrief\":\"22_J_xxx1_ROZ_Śr_21.00\",\"idOferta\":10789,\"tytulOferty\":\"Wielki Test o Polskich Wynalazcach i Odkrywcach\",\"linkBrief\":\"https://brief-dev.xxx.pl:9060/Main/BriefDetails/788\",\"linkOpublikowana1a\":\"https://brief-dev.xxx.pl:9060/Stage1A/Details/788\",\"linkOpublikowana1b\":\"https://brief-dev.xxx.pl:9060/Stage1B/Details/11181\",\"linkOpublikowana2\":\"https://brief-dev.xxx.pl:9060/Stage2/Details/10789\",\"linkOpublikowana3\":\"https://brief-dev.xxx.pl:9060/Stage3/Details/10789\",\"linkOpublikowana4\":\"https://brief-dev.xxx.pl:9060/Stage4/Details/10789\",\"linkOpublikowana5\":\"https://brief-dev.xxx.pl:9060/Stage5/Details/10789\",\"linkOpublikowana6\":\"https://brief-dev.xxx.pl:9060/Stage6/Details/10789\",\"linkOpublikowana7\":\"https://brief-dev.xxx.pl:9060/Stage7/Details/10789\"`);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -32,11 +32,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=10789",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=10789",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -79,11 +79,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -120,11 +120,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=9999999",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzOferte?offerId=9999999",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -181,11 +181,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -231,11 +231,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -281,11 +281,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/pobierzListeOfert",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -326,7 +326,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"idRodzajPorozumienia\": 2,\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.tvp.pl:7040/Agreement/Edit/161654\"\r\n}",
+							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"idRodzajPorozumienia\": 2,\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.xxx.pl:7040/Agreement/Edit/161654\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -334,11 +334,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -374,7 +374,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.tvp.pl:7040/Agreement/Edit/161654\"\r\n}",
+							"raw": "{\r\n  \"idOferta\": 10809,\r\n  \"idPorozumienie\": \"161654\",\r\n  \"nrPorozumienie\": \"P/3519/AKPDiAS/2022\",\r\n  \"nazwaAudycjiTV\": \"CHIRURDZY\",\r\n  \"linkPorozumienie\": \"https://sppt-dev.xxx.pl:7040/Agreement/Edit/161654\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -382,11 +382,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -436,7 +436,7 @@
 									"});\r",
 									"\r",
 									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(`Brak Id w tabeli Tvp.Brief.BriefData.Models.RodzajPorozumienia.`);\r",
+									"    pm.expect(pm.response.text()).to.include(`Brak Id w tabeli xxx.Brief.BriefData.Models.RodzajPorozumienia.`);\r",
 									"});\r",
 									"\r",
 									""
@@ -458,11 +458,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.9/BriefForSppt/powiazOferteZPorozumieniem",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
@@ -511,11 +511,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://wso2am-dev.tvp.pl:8243/brief-integration/1.10/BriefForSppt/usunPowiazanieOfertyZPorozumieniem",
+							"raw": "https://wso2am-dev.xxx.pl:8243/brief-integration/1.10/BriefForSppt/usunPowiazanieOfertyZPorozumieniem",
 							"protocol": "https",
 							"host": [
 								"wso2am-dev",
-								"tvp",
+								"xxx",
 								"pl"
 							],
 							"port": "8243",
